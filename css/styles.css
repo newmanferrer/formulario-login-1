@@ -1,0 +1,307 @@
+* {
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+}
+
+body {
+ width: 100%;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: orangered;
+}
+
+.main-container {
+ width: 400px;
+ height: 450px;
+ margin: 0px 15px;
+ background-color: white;
+ border-radius: 10px;
+ box-shadow: -5px 5px 50px rgba(0, 0, 0, 0.3), 5px -5px 50px rgba(0, 0, 0, 0.1);
+}
+
+.main-container__tittle {
+ font-family: "Montserrat", serif;
+ padding: 20px 0px;
+ text-align: center;
+ color: orangered;
+ font-size: 45px;
+ font-weight: bold;
+ text-transform: uppercase;
+ border-bottom: 1px solid gray;
+}
+
+.main-container__formulario {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 20px 50px;
+}
+
+.formulario__text-field {
+ position: relative;
+ width: 100%;
+ margin: 20px 0px;
+ border-bottom: 2px solid#adadad;
+}
+
+.formulario__input,
+.formulario__label,
+.formulario__link {
+ font-family: "Lato", serif;
+}
+
+.formulario__input {
+ padding: 10px 5px;
+ color: orangered;
+ font-size: 16px;
+ border: none;
+ outline: none;
+ background: none;
+}
+
+.formulario__label {
+ position: absolute;
+ top: 50%;
+ left: 5px;
+ color: gray;
+ font-size: 18px;
+ font-weight: 600;
+ transform: translateY(-50%);
+ pointer-events: none;
+ transition: 0.5s ease;
+}
+
+.formulario__span {
+ position: absolute;
+ top: 100%;
+ left: 0px;
+ width: 0px;
+ height: 3px;
+ background-color: orangered;
+ transition: 0.5s ease;
+}
+
+.formulario__input:focus ~ label,
+.formulario__input:valid ~ label {
+ top: -5px;
+ color: orangered;
+}
+
+.formulario__input:focus ~ span,
+.formulario__input:valid ~ span {
+ width: 100%;
+}
+
+
+.formulario__link {
+ color: orangered;
+ font-size: 18px;
+ font-weight: 600;
+ text-decoration: none;
+ align-self: flex-start;
+}
+
+.formulario__button {
+ margin: 20px 0px;
+ padding: 10px;
+ width: 100%;
+ color: white;
+ font-size: 25px;
+ font-weight: 600;
+ text-transform: uppercase;
+ transition: background-color 1s ease-out;
+ outline: none;
+ border: 2px solid orangered;
+ border-radius: 5px;
+ background-color: orangered;
+}
+
+.formulario__button:hover,
+.formulario__button:focus {
+ color: orangered;
+ cursor: pointer;
+ background-color: white;
+ border: 2px solid orangered;
+ box-shadow: 7px 7px 10px orangered;
+ transition: background-color 1s ease-out;
+}
+
+.formulario__signup-link {
+ margin-top: 10px;
+ font-size: 18px;
+ font-weight: 600;
+}
+
+.message-container {
+ margin: 3rem auto;
+ padding: 0.5rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border: none;
+ border-radius: 5px;
+ background-color: white;
+}
+
+.message-paragraph {
+ font-weight: bold;
+}
+
+.message-link {
+ margin-left: 0.5rem;
+ text-decoration: none;
+ color: orangered;
+ font-size: 18px;
+ font-weight: bold;
+}
+
+.modal-help-container {
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: fixed;
+ top: 0;
+ left: 0;
+ transform: scale(0);
+ transition: transform 1s ease-out;
+ background-color: rgba(255, 55, 0, 0.515);
+}
+
+.modal--show {
+ transform: scale(1);
+}
+
+.modal-help {
+ width: 50vw;
+ height: 35vh;
+ padding: 1.2rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ border: 3px solid orangered;
+ border-radius: 5px;
+ background-color: white;
+}
+
+.modal-article {
+ margin: 1rem 0;
+}
+
+.modal-title {
+ font-size: 1.7rem;
+ color: orangered;
+}
+
+.modal-paragraph {
+ margin: 0.5rem 0;
+ font-size: 1.2rem;
+ text-align: justify;
+ color: orangered;
+}
+
+.none {
+ display: none;
+}
+
+/* =============================================================================== */
+/* LARGE SCREEN (700px o superior) /*
+/* =============================================================================== */
+@media screen and (min-width: 700px){
+ .main-container {
+  width: 450px;
+  height: 520px;
+  margin: 0px 15px;
+ }
+
+ .main-container__tittle {
+  font-size: 55px;
+ }
+
+ .main-container__formulario {
+  padding: 25px 50px;
+ }
+
+ .formulario__text-field {
+  margin: 25px 0px;
+ }
+    
+ .formulario__label {
+  font-size: 22px;
+ }
+
+ .formulario__input {
+  padding: 12px 6px;
+  font-size: 20px;
+ }
+
+ .formulario__button {
+  margin: 20px 0px 15px;
+  padding: 15px;   
+  font-size: 30px; 
+ }
+
+ .formulario__signup-link {
+  margin-top: 15px; 
+  font-size: 22px; 
+ }
+
+ .formulario__link {
+  font-size: 22px; 
+ }
+}
+/* =============================================================================== */
+
+/* =============================================================================== */
+/* EXTRA LARGE SCREEN (1024px o superior) */
+/* =============================================================================== */
+@media screen and (min-width: 1024px){
+ .main-container {
+  width: 500px;
+  height: 600px;
+  margin: 0px 15px;
+ }
+
+ .main-container__tittle {
+  font-size: 65px;
+ }
+
+ .main-container__formulario {
+  padding: 30px 60px;
+ }
+
+ .formulario__text-field {
+  margin: 30px 0px;
+ }
+    
+ .formulario__label {
+  font-size: 26px;
+ }
+
+ .formulario__input {
+  padding: 15px 8px;
+  font-size: 25px;
+ }
+
+ .formulario__button {
+  margin: 20px 0px 15px;
+  padding: 15px;   
+  font-size: 40px; 
+ }
+
+ .formulario__signup-link {
+  margin-top: 18px; 
+  font-size: 26px; 
+ }
+
+ .formulario__link {
+  font-size: 26px; 
+ }
+}
+/* =============================================================================== */

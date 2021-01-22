@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Formulario de Login No.1</title>
+ </head>
+ <body>
+  <div class="main-container">
+   <h1 class="main-container__tittle">Login</h1>
+   <form action="" class="main-container__formulario" id="formulario">
+    <div class="formulario__text-field">
+     <input class="formulario__input" id="username" name="username" type="text" minlength="8" maxlength="30" required autocomplete="off">
+     <span class="formulario__span"></span>
+     <label class="formulario__label">Username or Email</label>
+    </div>
+    <div class="formulario__text-field">
+     <input class="formulario__input" id="password" name="password" type="password" minlength="8" maxlength="15" required autocomplete="off">
+     <span class="formulario__span"></span>
+     <label class="formulario__label">Password</label>
+    </div>
+    <a class="formulario__link" href="#">Forget Password?</a>         
+    <button class="formulario__button">Login</button>           
+    <div class="formulario__signup-link">
+     Not a Member <a class="formulario__link" href="#">Signup</a>
+    </div>
+   </form> 
+   <div class="message-container none" id="message-container"></div>
+   <div class="modal-help-container" id="modal-help-container">
+    <div class="modal-help">
+     <article class="modal-article">
+      <h2 class="modal-title">Username</h2>
+      <p class="modal-paragraph">Alfanumérico. Ocho (08) caracteres. Letras (a - z) (A – Z). Números (0 - 9). Sin espacios ni caracteres especiales.</p>
+     </article>
+     <article class="modal-article">
+      <h2 class="modal-title">Password</h2>
+      <p class="modal-paragraph">Mínimo ocho (08) caracteres. Letras mayúsculas y minúsculas. Números y caracteres especiales. Sin espacios.   </p>
+     </article>
+    </div>
+   </div>       
+  </div>
+  <script src="js/scripts.js" type="module"></script>
+ </body>
+</html>
